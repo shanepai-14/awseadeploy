@@ -4,7 +4,7 @@ services:
     git:
       repo_clone_url: https://github.com/shanepai-14/awseadeploy.git
       branch: main
-    run_command: python app.py
+    run_command: gunicorn -c gunicorn.conf.py app:app
     http_port: 8080
     environment_slug: python
     instance_size_slug: basic-xxs
