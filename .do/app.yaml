@@ -1,4 +1,4 @@
-name: sample-flask
+name: awsea
 services:
 - name: web
   github:
