@@ -1,9 +1,0 @@
-name: awsea
-services:
-- name: web
-  github:
-    repo: shanepai-14/awseadeploy
-    branch: main
-  packages:
-    apt:
-      - libgl1
