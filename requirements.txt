@@ -5,6 +5,6 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 Werkzeug==1.0.1
-numpy==1.24.3
 Pillow==11.3.0
-inference-sdk==0.51.1   # fixed package name and version
+numpy>=2.0.0,<2.3.0
+inference-sdk==0.51.1
