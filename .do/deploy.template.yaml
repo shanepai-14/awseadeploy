@@ -1,13 +1,11 @@
-spec:
-  name: wen-devlife
-  services:
+name: awsea
+services:
   - name: web
     git:
+      repo_clone_url: https://github.com/shanepai-14/awseadeploy.git
       branch: main
-      repo_clone_url: https://gitlab.com/wendevlife-group/WenDEVLIFE-awseadeploy.git
     run_command: python app.py
     http_port: 8080
     environment_slug: python
     instance_size_slug: basic-xxs
     instance_count: 1
-
