@@ -17,8 +17,6 @@ CLIENT = InferenceHTTPClient(
 
 MODEL_ID = "eggplant-fruit-disease-detection/21?confidence=0.2"
 
-
-
 def preprocess_image_for_model(image, target_size=(224, 224), normalize=True, to_array=True):
     if not isinstance(image, Image.Image):
         raise TypeError("Expected a PIL Image.")
@@ -123,8 +121,6 @@ def decode_base64_image(base64_str):
     except Exception as e:
         raise ValueError("Invalid base64 image") from e
 
-
-
 def draw_boxes(image, predictions):
     draw = ImageDraw.Draw(image)
     for pred in predictions:
@@ -141,7 +137,6 @@ def draw_boxes(image, predictions):
         text_position = (left, top - 15)
         draw.text(text_position, label, fill='red')
     return image
-
 
 @app.route('/infer', methods=['POST'])
 def infer_image():
@@ -188,4 +183,4 @@ def infer_image():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True)
